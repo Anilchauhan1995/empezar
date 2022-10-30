@@ -1,0 +1,52 @@
+@import 'var.scss';
+
+:root {
+
+    --bg_dark_color: $bg_dark_color;
+    --bg_cyprus_color: $bg_cyprus_color;
+    --bg_dark_gray_color: $bg_dark_gray_color;
+
+
+}
+
+.bg_dark_color{
+    background-color: var(--bg_dark_gray_color);
+}
+.bg_cyprus_color{
+    background-color: var(--bg_cyprus_color);
+}
+.bg_dark_gray_color{
+    background-color: var(--bg_dark_gray_color);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: var(--poppins_font);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+h1.fz-60{
+    font-size: $banner_heading;
+    font-family: $poppins_font;
+
+}
+h3{
+
+}
+
+.btn-outline-theme {
+    border: 1px solid;
+    border-radius: 0;
+    padding: 4px 15px;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: $poppins_font;
+}
