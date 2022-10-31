@@ -37,6 +37,10 @@ h1.fz-60 {
   font-family: "Poppins", sans-serif;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Poppins", sans-serif;
+}
+
 .btn-outline-theme {
   border: 1px solid;
   border-radius: 0;
