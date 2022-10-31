@@ -3,6 +3,14 @@
 header.header_section{
     z-index: 1;
     nav{
+        a.navbar-brand{
+            img{
+                width: 100px;
+                background-color: #fff;
+                border-radius: 100%;
+
+            }
+        }
         ul.navbar-nav{
             column-gap: 2rem;
             li{
@@ -35,119 +43,199 @@ header.header_section{
         }
     }
 }
-.banner_section{
-    background-image: url("../../images/banner.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    min-height: 600px;
+main.main_wrapper{
     display: flex;
-    position: relative;
-    &::after{
-        content: "";
-        position: absolute;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 114.38%);
-        top: 0;
-        left: 0;
-        right: 0;
-        height: calc(100vh - 270px);
-        min-height: 343px;
+    flex-wrap: nowrap;
+    .section{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-shrink: 0;
     }
 
-    .banner_wrapper{
-        width: 500px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 100%;
-    align-self: flex-end;
-    justify-content: end;
-    }
-}
+    .banner_section{
+        background-image: url("../../images/banner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 114.38%);
+            top: 0;
+            left: 0;
+            right: 0;
+            min-height: 343px;
+        }
 
-
-section.bg_cyprus_color{
-    background-color: $bg_cyprus_color;
-    background-image: url("../../images/Vector.png");
-    background-repeat: no-repeat;
-    background-position: 0% -25%;
-    background-size: 50%;
-
-    .crypus_wrapper{
+        .banner_wrapper{
+            width: 500px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex: 1;
+        align-self: flex-end;
+        justify-content: end;
         height: 100%;
-        padding: 4rem 0 2rem;
-        .crypus_wrapper_menu{
-            ul{
-                display: flex;
-                column-gap: 1rem;
-                position: relative;
+        }
+    }
+
+    section.businesses_globally{
+        background-color: $bg_dark_gray_color;
+        position: relative;
+
+
+        .bg_global_wrapper{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .bg_global_subtitle {
+                width: 28rem;
+                text-transform: capitalize;
+                margin: 0 auto;
             }
-            li{
-                a{
-                    color: $text_white_color;
+            .first_images {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-20%, -50%);
+                z-index: 9;
+            }
+
+            .bg_global_title{
+
+                h1{
+                    font-size: 27rem;
+                    font-family: $poppins_font;
+                    text-transform: capitalize;
+                    position: relative;
+                    line-height: 1;
+
+                    &:after{
+                            content: "ess";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            mix-blend-mode: screen;
+                            color: #fff;
+                            text-transform: lowercase;
+                            background: -webkit-linear-gradient(180deg ,#fff 70%, #000 37%);
+                            -webkit-background-clip: text;
+	                        -webkit-text-fill-color: transparent;
+                        }
                 }
             }
-        }
-        .crypus_wrapper_img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -25%);
-            width: 300px;
-
-            img{
-                width: 100%;
-                transform: rotate(8deg);
-            }
-        }
-        .crypus_wrapper_subtitle{
-            h3{
-                font-size: 30px;
-                font-family: $poppins_font;
-                text-align: center;
-            }
-        }
-
-        .crypus_wrappertitle{
-
-            h1{
-                font-size: 8rem;
-                text-transform: capitalize;
-                font-family: $cormorant_font;
-            }
-        }
-        .more_content {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            margin-top: 3rem;
-                .make_enq a {
-                background-color: $button_bg_theme_color;
-                color: #fff;
-                padding: 0%;
-                border-radius: 100%;
-                width: 95px;
-                aspect-ratio: 1/1;
-                height: 95px;
+            .member_image{
                 display: flex;
-                text-align: center;
-                align-items: center;
-                font-family: $poppins_font;
-                font-weight: 300;
-            }
-            .more_content_text{
-                flex-basis: 60%;
+                justify-content: center;
+                width: 200px;
+                margin: 0 auto;
 
-                h3{
-                    font-family: $poppins_font;
+                img{
+                    width: 100%;
                 }
             }
         }
     }
-    
+    section.section_image_only.section {
+        width: 53vw;
+
+        .full_image{
+        background-image: url("../../images/iStock-6372116522.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        }
+    }
+
+    section.bg_cyprus_color{
+        background-color: $bg_cyprus_color;
+        background-image: url("../../images/Vector.png");
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+        background-size: 60%;
+        position: relative;
+
+        .crypus_wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            flex: 1;
+            .crypus_wrapper_menu{
+                ul{
+                    display: flex;
+                    column-gap: 1rem;
+                    position: relative;
+                }
+                li{
+                    a{
+                        color: $text_white_color;
+                    }
+                }
+            }
+            .crypus_wrapper_img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -40%);
+                width: 300px;
+
+                img{
+                    width: 100%;
+                    transform: rotate(8deg);
+                }
+            }
+            .crypus_wrapper_subtitle{
+                h3{
+                    font-size: 30px;
+                    font-family: $poppins_font;
+                    text-align: center;
+                }
+            }
+
+            .crypus_wrappertitle{
+
+                h1{
+                    font-size: 8rem;
+                    text-transform: capitalize;
+                    font-family: $cormorant_font;
+                }
+            }
+            .more_content {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                margin-top: 3rem;
+                    .make_enq a {
+                    background-color: $button_bg_theme_color;
+                    color: #fff;
+                    padding: 0%;
+                    border-radius: 100%;
+                    width: 95px;
+                    aspect-ratio: 1/1;
+                    height: 95px;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    font-family: $poppins_font;
+                    font-weight: 300;
+                }
+                .more_content_text{
+                    flex-basis: 60%;
+
+                    h3{
+                        font-family: $poppins_font;
+                    }
+                }
+            }
+        }
+        
+    }
 }
