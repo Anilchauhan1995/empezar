@@ -1,26 +1,24 @@
-$(function () { // wait for document ready
-  
-    var controller = new ScrollMagic.Controller();
-  
-    var horizontalSlide = new TimelineMax()
-    // animate panels
-    .to("#js-slideContainer", 1,   {x: "-20%"})	
-    .to("#js-slideContainer", 1,   {x: "-40%"})
-    .to("#js-slideContainer", 1,   {x: "-60%"})
-    .to("#js-slideContainer", 1,   {x: "-80%"})
-  
-  
-    // create scene to pin and link animation
-    new ScrollMagic.Scene({
-      triggerElement: "#js-wrapper",
-      triggerHook: "onLeave",
-      duration: "400%"
-    })
-      .setPin("#js-wrapper")
-      .setTween(horizontalSlide)
-      //.addIndicators() // add indicators (requires plugin)
-      .addTo(controller);
-    
-    
-    
-  });
+// gsap.registerPlugin(ScrollTrigger);
+
+// const sec_scroll = gsap.timeline();
+
+// sec_scroll.to(".main_wrapper",{x:-window.innerWidth})
+
+// ScrollTrigger.create({
+//   animation:sec_scroll,
+//   trigger:"main_wrapper",
+// })
+
+
+// let sections = gsap.utils.toArray(".section");
+
+// gsap.to(sections, {
+//   xPercent: -100 * (sections.length - 1),
+//   scrollTrigger: {
+//     trigger: ".main_wrapper",
+//     pin: true,
+//     scrub: 1,
+//     snap: 1 / (sections.length - 1),
+//     end: "+=3500",
+//   }
+// });
