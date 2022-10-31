@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const sections = gsap.utils.toArray("section");
+var sections = gsap.utils.toArray(".section");
 let maxWidth = 0;
 
 const getMaxWidth = () => {

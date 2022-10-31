@@ -1,25 +1,10 @@
-
 @import 'var.scss';
 
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    color: white;
-  }
 header.header_section{
     z-index: 1;
     nav{
         a.navbar-brand{
-            img{
-                width: 100px;
-                background-color: #fff;
-                border-radius: 100%;
-
-            }
+           color: $text_white_color;
         }
         ul.navbar-nav{
             column-gap: 2rem;
@@ -106,14 +91,15 @@ main.main_wrapper{
             .bg_global_subtitle {
                 width: 28rem;
                 text-transform: capitalize;
-                margin: 0 auto;
+                margin: 60px auto 0;
             }
             .first_images {
                 position: absolute;
-                top: 50%;
+                top: 70%;
                 left: 0;
-                transform: translate(-20%, -50%);
+                transform: translate(-11%, -50%);
                 z-index: 9;
+                width: 100%;
             }
             .second_images {
                 position: absolute;
@@ -238,6 +224,7 @@ main.main_wrapper{
                     font-size: 8rem;
                     text-transform: capitalize;
                     font-family: $cormorant_font;
+                    line-height: 1;
                 }
             }
             .more_content {
