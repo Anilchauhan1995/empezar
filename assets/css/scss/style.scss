@@ -46,12 +46,12 @@ header.header_section{
 main.main_wrapper{
     display: flex;
     flex-wrap: nowrap;
-    .section{
+    .section_large{
         width: 100vw;
-        height: 100vh;
         display: flex;
         flex-shrink: 0;
     }
+    
 
     .banner_section{
         background-image: url("../../images/banner.jpg");
@@ -127,6 +127,7 @@ main.main_wrapper{
                     text-transform: capitalize;
                     position: relative;
                     line-height: 1;
+                    margin-left: 33rem;
 
                     &:after{
                             content: "ess";
@@ -157,8 +158,10 @@ main.main_wrapper{
             }
         }
     }
-    section.section_image_only.section {
-        width: 53vw;
+    section.section_image_only.section_small {
+        width: 46vw !important;
+        position: relative;
+        z-index: -1;
 
         .full_image{
         background-image: url("../../images/iStock-6372116522.jpg");

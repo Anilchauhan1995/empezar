@@ -1,24 +1,34 @@
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-// const sec_scroll = gsap.timeline();
+const sections = gsap.utils.toArray("section");
+let maxWidth = 0;
 
-// sec_scroll.to(".main_wrapper",{x:-window.innerWidth})
+const getMaxWidth = () => {
+  maxWidth = 0;
+  sections.forEach((section) => {
+    maxWidth += section.offsetWidth;
+  });
+};
+getMaxWidth();
+ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
 
-// ScrollTrigger.create({
-//   animation:sec_scroll,
-//   trigger:"main_wrapper",
-// })
+gsap.to(sections, {
+  x: () => `-${maxWidth - window.innerWidth}`,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".main_wrapper",
+    pin: true,
+    scrub: true,
+    end: () => `+=${maxWidth}`,
+    invalidateOnRefresh: true
+  }
+});
 
-
-// let sections = gsap.utils.toArray(".section");
-
-// gsap.to(sections, {
-//   xPercent: -100 * (sections.length - 1),
-//   scrollTrigger: {
-//     trigger: ".main_wrapper",
-//     pin: true,
-//     scrub: 1,
-//     snap: 1 / (sections.length - 1),
-//     end: "+=3500",
-//   }
-// });
+sections.forEach((sct, i) => {
+  ScrollTrigger.create({
+    trigger: sct,
+    start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/2) * (maxWidth / (maxWidth - window.innerWidth)),
+    end: () => '+=' + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+    toggleClass: {targets: sct, className: "active"}
+  });
+});
