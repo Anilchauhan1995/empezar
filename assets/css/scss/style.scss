@@ -1,5 +1,15 @@
 
 @import 'var.scss';
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    color: white;
+  }
 header.header_section{
     z-index: 1;
     nav{
@@ -71,12 +81,14 @@ main.main_wrapper{
 
         .banner_wrapper{
             width: 500px;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        align-self: flex-end;
-        justify-content: end;
-        height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-self: flex-end;
+            justify-content: end;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
         }
     }
 
@@ -127,7 +139,7 @@ main.main_wrapper{
                     text-transform: capitalize;
                     position: relative;
                     line-height: 1;
-                    margin-left: 33rem;
+                    margin-left: 32rem;
 
                     &:after{
                             content: "ess";
@@ -147,10 +159,11 @@ main.main_wrapper{
             .member_image{
                 display: flex;
                 justify-content: center;
-                width: 200px;
-                margin: 0 auto;
-                margin-top: -162px;
-                position: relative;
+                position: absolute;
+                width: 232px;
+                left: 50%;
+                bottom: 0%;
+                transform: translate(50%, 0%);
 
                 img{
                     width: 100%;

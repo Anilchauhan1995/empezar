@@ -31,4 +31,5 @@ sections.forEach((sct, i) => {
     end: () => '+=' + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
     toggleClass: {targets: sct, className: "active"}
   });
-});
+})
+.to(sections, { xPercent: -100 * (sections.length), duration:1, ease: "none"})
