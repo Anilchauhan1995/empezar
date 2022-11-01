@@ -1,5 +1,67 @@
 @import 'var.scss';
 
+.viewer{
+    .viewer_text{
+        background-color: $bg_dark_color;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+        p{
+            color: $text_white_color;
+        }
+    }
+
+        .loading_page{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 999;
+            background-color: $bg_dark_color;
+            svg{
+                width: 150px;     
+                height: 150px;
+                stroke: #fff;
+                stroke-width: 5px;
+                stroke-dasharray: 2500;
+                animation: draw 3s ease-in;
+
+            }
+            .logo_name{
+                height: 30px;
+                overflow: hidden;
+
+                p{
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+ }
+
+@keyframes draw {
+    0%{
+        stroke-dashoffset: 2500;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
 header.header_section{
     z-index: 1;
     nav{
