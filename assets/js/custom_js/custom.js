@@ -128,28 +128,31 @@ tl
     }
   })
   
-//   window.addEventListener("scroll", function(event) {
+  window.addEventListener("scroll", function(event) {
   
-//     var top = this.scrollY;
+    var top = this.scrollY;
 
-//       if(top<300){
-//         document.querySelector("header").classList.remove("active")
-     
-//    }
-
-//     if(top<2000){
-//         document.querySelector("header").classList.remove("active_add")
+      if(top>1800){
        
-//    }
-    
-//   else if(top>3000){
+        document.querySelector("header").classList.add("active")
+   }
 
-//        document.querySelector("header").classList.add("active_add")
-//    }
-//     else if(top<3000 || top>400){
-        
-//         document.querySelector("header").classList.add("active")
-//     }
+    else if(top<1000){
+      document.querySelector("header").classList.remove("active")
+       
+    }
+
+    if(top>2000){
+       
+      document.querySelector("header").classList.add("active_add")
+     
+ }
+  
+else if(top<2000){
+  
+  document.querySelector("header").classList.remove("active_add")
+  
+ }
    
-// });
+});
 

@@ -28,8 +28,9 @@ ul {
   margin: 0;
 }
 
-a {
+a.nav-link {
   text-decoration: none;
+  color: #fff;
 }
 
 h1.fz-60 {

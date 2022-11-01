@@ -66,14 +66,40 @@ header.header_section{
     z-index: 1;
     &.active{
         nav{
+            a.navbar-brand{
+                color: $bg_dark_color;
+            }
             ul{
                 li{
-                    a{
-                        color: $bg_dark_color !important;
+                    a.nav-link{
+                        color: $bg_dark_color;
+                        img{
+                            filter: invert(1);
+                        }
                     }
                 }
             }
         }
+    }
+    &.active_add{
+        nav{
+            a.navbar-brand{
+                color: $text_white_color;
+            }
+
+            ul{
+                li{
+                    a.nav-link{
+                        color: $text_white_color;
+
+                        img{
+                            filter: invert(0);
+                        }
+                    }
+                }
+            }
+        }
+
     }
     nav{
         a.navbar-brand{
@@ -119,10 +145,6 @@ header.header_section{
             ul{
                 column-gap: 2rem;
                 li{
-                    a{
-                        color: $text_white_color;
-                        font-family: $poppins_font;
-                    }
                     .search_icon {
                         width: 33px;
                         height: 33px;

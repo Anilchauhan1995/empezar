@@ -30,8 +30,9 @@ ul{
     padding: 0;
     margin: 0;
 }
-a{
+a.nav-link{
     text-decoration: none;
+    color: $text_white_color;
 }
 h1.fz-60{
     font-size: $banner_heading;

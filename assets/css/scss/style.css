@@ -66,8 +66,23 @@
 header.header_section {
   z-index: 1;
 }
-header.header_section.active nav ul li a {
-  color: #000 !important;
+header.header_section.active nav a.navbar-brand {
+  color: #000;
+}
+header.header_section.active nav ul li a.nav-link {
+  color: #000;
+}
+header.header_section.active nav ul li a.nav-link img {
+  filter: invert(1);
+}
+header.header_section.active_add nav a.navbar-brand {
+  color: #fff;
+}
+header.header_section.active_add nav ul li a.nav-link {
+  color: #fff;
+}
+header.header_section.active_add nav ul li a.nav-link img {
+  filter: invert(0);
 }
 header.header_section nav a.navbar-brand {
   color: #fff;
@@ -105,10 +120,6 @@ header.header_section nav ul.navbar-nav li a {
 header.header_section nav .right_menu ul {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-}
-header.header_section nav .right_menu ul li a {
-  color: #fff;
-  font-family: "Poppins", sans-serif;
 }
 header.header_section nav .right_menu ul li .search_icon {
   width: 33px;
