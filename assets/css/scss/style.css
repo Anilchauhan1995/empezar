@@ -66,6 +66,9 @@
 header.header_section {
   z-index: 1;
 }
+header.header_section.active nav ul li a {
+  color: #000 !important;
+}
 header.header_section nav a.navbar-brand {
   color: #fff;
 }
@@ -89,11 +92,6 @@ header.header_section nav span.navbar-toggler-icon::after, header.header_section
 header.header_section nav span.navbar-toggler-icon:after {
   top: unset;
   bottom: -5px;
-}
-header.header_section nav button.navbar-toggler {
-  display: flex;
-  padding: 0.8rem 0.4rem;
-  box-shadow: unset;
 }
 header.header_section nav ul.navbar-nav {
   -moz-column-gap: 2rem;

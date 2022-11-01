@@ -1,1 +1,7 @@
-/*# sourceMappingURL=responsive.css.map */
+@media (max-width: 767px) {
+  button.navbar-toggler {
+    display: flex;
+    padding: 0.8rem 0.4rem;
+    box-shadow: unset;
+  }
+}/*# sourceMappingURL=responsive.css.map */
