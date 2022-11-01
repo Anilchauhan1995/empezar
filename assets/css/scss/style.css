@@ -33,8 +33,8 @@
   stroke: #fff;
   stroke-width: 5px;
   stroke-dasharray: 2500;
-  -webkit-animation: draw 3s ease-in;
-          animation: draw 3s ease-in;
+  -webkit-animation: draw 1.5s ease-in;
+          animation: draw 1.5s ease-in;
 }
 .viewer .loading_page .logo_name {
   height: 30px;

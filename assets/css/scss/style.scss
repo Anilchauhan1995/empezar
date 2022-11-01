@@ -16,8 +16,7 @@
             color: $text_white_color;
         }
     }
-
-        .loading_page{
+    .loading_page{
             position: fixed;
             top: 0;
             left: 0;
@@ -36,7 +35,7 @@
                 stroke: #fff;
                 stroke-width: 5px;
                 stroke-dasharray: 2500;
-                animation: draw 3s ease-in;
+                animation: draw 1.5s ease-in;
 
             }
             .logo_name{
@@ -49,7 +48,7 @@
                     text-align: center;
                 }
             }
-        }
+    }
  }
 
 @keyframes draw {
