@@ -15,8 +15,8 @@ gsap.fromTo('.loading_page',
 {opacity:1},
 {
   opacity:0,
-  duration:1,
-  delay:2
+  duration:1.5,
+  delay:2.8
 }
   );
 
@@ -33,9 +33,6 @@ gsap.fromTo('.loading_page',
   }
   
   )
-// loder animation end
-
-// horizontal scrolling
 
 var sections = gsap.utils.toArray(".section");
 let maxWidth = 0;
@@ -55,8 +52,7 @@ gsap.to(sections, {
   scrollTrigger: {
     trigger: ".main_wrapper",
     pin: true,
-    scrub: 1,
-    // snap: 1 / (sections.length - 1),
+    scrub: true,
     end: () => `+=${maxWidth}`,
     invalidateOnRefresh: true
   }
@@ -72,8 +68,6 @@ sections.forEach((sct, i) => {
 })
 // .to(sections, { xPercent: -100 * (sections.length), duration:1, ease: "none"})
 
-
-// banner text animate
 gsap.to(".section", {
   scrollTrigger: {
     scrub: true
@@ -100,7 +94,6 @@ tl
       });
     }
   })
-
 
   .from(".banner_wrapper h1",{
     opacity:0,
@@ -134,41 +127,6 @@ tl
       });
     }
   })
-
-
-let tlMain = gsap.timeline({
-  scrollTiggler:{
-    trigger: ".section",
-    start:"top top",
-    end:"bottom bottom",
-    scrub:1
-  }
-})
-
-gsap.timeline({
-  scrollTrigger:{
-    trigger:".banner_section",
-    start:"left left",
-    end:"right left",
-    scrub:true,
-    sectionAnimation:tlMain
-  }
-}).
-from("img",{scale:1.2})
-
-gsap.timeline({
-  scrollTrigger:{
-    trigger:".bg_global_title",
-    start:"left left",
-    end:"right right",
-    scrub:true,
-    sectionAnimation:tlMain
-  }
-}).
-from("img",{scale:1.2})
-
-
-
   
   window.addEventListener("scroll", function(event) {
   
@@ -184,17 +142,16 @@ from("img",{scale:1.2})
        
     }
 
-    if(top>2000){
+    if(top>2600){
        
       document.querySelector("header").classList.add("active_add")
      
  }
   
-else if(top<2000){
+else if(top<2500){
   
   document.querySelector("header").classList.remove("active_add")
   
  }
    
 });
-
